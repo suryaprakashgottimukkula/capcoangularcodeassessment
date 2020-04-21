@@ -1,0 +1,24 @@
+ul.pagination {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+ul.pagination li {display: inline;}
+
+ul.pagination li a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+a.page-item active{
+  background-color: black;
+  color:white;
+}
+
+li.page-item.active{
+  font-size: x-large;
+  font-style: italic;
+}
