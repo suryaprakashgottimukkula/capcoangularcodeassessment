@@ -22,6 +22,8 @@ export class AppPaginationComponent implements OnChanges {
     this.activePage = 1;
     this.onPageChange.emit(1);
   }
+
+  // for doing the page count
   private  getPageCount(): number {
     let totalPage = 0;
     if (this.totalRecords > 0 && this.recordsPerPage > 0) {
