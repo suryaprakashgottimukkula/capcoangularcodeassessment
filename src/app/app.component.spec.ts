@@ -1,12 +1,22 @@
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { UserService } from './service/user.service';
+import { BrowserModule } from '@angular/platform-browser';
+import { AppPaginationComponent } from './app/app-pagination/app-pagination.component';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
-        AppComponent
+        AppComponent,
+        AppPaginationComponent
       ],
+      imports: [
+        BrowserModule,
+        HttpClientModule
+      ],
+      providers: [HttpClient, UserService],
     }).compileComponents();
   }));
 
@@ -20,12 +30,5 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
     expect(app.title).toEqual('angularcodechallenge');
-  });
-
-  it('should render title in a h1 tag', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Welcome to angularcodechallenge!');
   });
 });
