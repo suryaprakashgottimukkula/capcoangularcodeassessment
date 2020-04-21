@@ -1,0 +1,42 @@
+.fixed_header{
+  table-layout: fixed;
+  border-collapse: collapse;
+
+}
+
+.fixed_header tbody{
+display:block;
+width: 100%;
+overflow: auto;
+height: 400px;
+border: 2px thick black;
+}
+.fixed_header tfoot{
+  display:block;
+  width: 100%;
+  overflow: auto;
+  height: 43px;
+  background: lightgreen;
+}
+
+.fixed_header thead tr {
+ display: block;
+}
+
+.fixed_header thead {
+background: lightgreen;
+color: black;
+}
+
+.fixed_header th, .fixed_header td {
+padding: 5px;
+text-align: left;
+width: 300px;
+min-width: 275px;
+}
+.fixed_header tbody tr:nth-child(even) {background-color: #f2f2f2;}
+
+
+.paginationTd{
+  width:100% !important;
+}
